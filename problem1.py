@@ -65,7 +65,7 @@ def process_permutation(arr):
             header += names[arr[i]]+" "
         # выводим названия вершин
         print(header)
-        # выводим расстоянии
+        # выводим расстояния
         print(ab_distance, gd_distance,  ge_distance)
 
 
