@@ -6,13 +6,13 @@ names = ['А', 'Б', 'В', 'Г', 'Д', 'Е', 'Ж']
 
 #   П1  П2  П3  П4  П5  П6  П7
 source = [
-    [0, 10, 15,  0,  0,  0,  0],  # П1
-    [10, 0,  0, 13, 17,  0,  0],  # П2
-    [15, 0,  0,  0, 19,  0,  9],  # П3
-    [0, 14,  0,  0, 10, 20, 11],  # П4
-    [0, 17, 19, 10,  0,  0, 20],  # П5
-    [0,  0,  0, 20,  0,  0, 25],  # П6
-    [0,  0,  9, 11, 20, 25,  0]  # П7
+    [0, 10, 15, 0, 0, 0, 0],  # П1
+    [10, 0, 0, 13, 17, 0, 0],  # П2
+    [15, 0, 0, 0, 19, 0, 9],  # П3
+    [0, 14, 0, 0, 10, 20, 11],  # П4
+    [0, 17, 19, 10, 0, 0, 20],  # П5
+    [0, 0, 0, 20, 0, 0, 25],  # П6
+    [0, 0, 9, 11, 20, 25, 0]  # П7
 ]
 #    А  Б  В  Г  Д  Е  Ж
 target = [
@@ -22,12 +22,21 @@ target = [
     [0, 1, 1, 0, 1, 1, 0],  # Г
     [0, 1, 0, 1, 0, 1, 1],  # Д
     [0, 0, 1, 1, 1, 0, 1],  # Е
-    [0, 0, 0, 0, 1, 1, 0]   # Ж
+    [0, 0, 0, 0, 1, 1, 0]  # Ж
 ]
 
 # степени вершин
 source_sum = [0 for i in range(SIZE)]
 target_sum = [0 for i in range(SIZE)]
+
+
+# получить обратную перестановку
+def getReversePermutation(arr):
+    reverse = [0] * len(arr)
+    for i in range(len(arr)):
+        reverse[arr[i]] = i
+
+    return reverse
 
 
 # обработка перестановки
@@ -61,12 +70,14 @@ def process_permutation(arr):
     if gd_distance < ge_distance:
         # формируем заголовок
         header = ""
+        # получаем обратную перестановку
+        reverse = getReversePermutation(arr)
         for i in range(SIZE):
-            header += names[arr[i]]+" "
+            header += names[reverse[i]] + " "
         # выводим названия вершин
         print(header)
         # выводим расстояния
-        print(ab_distance, gd_distance,  ge_distance)
+        print(ab_distance, gd_distance, ge_distance)
 
 
 # функция-генератор перестановок

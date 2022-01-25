@@ -32,6 +32,14 @@ source_sum = [0 for i in range(SIZE)]
 target_sum = [0 for i in range(SIZE)]
 
 
+# получить обратную перестановку
+def getReversePermutation(arr):
+    reverse = [0] * len(arr)
+    for i in range(len(arr)):
+        reverse[arr[i]] = i
+
+    return reverse
+
 # обработка перестановки
 def process_permutation(arr):
     print(arr)
@@ -64,8 +72,10 @@ def process_permutation(arr):
     if gd_distance < ge_distance:
         # формируем заголовок
         header = ""
+        # получаем обратную перестановку
+        reverse = getReversePermutation(arr)
         for i in range(SIZE):
-            header += names[arr[i]]+" "
+            header += names[reverse[i]] + " "
         # выводим названия вершин
         print(header)
         # выводим расстояния
