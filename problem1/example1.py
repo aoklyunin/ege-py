@@ -31,7 +31,7 @@ target_sum = [0 for i in range(SIZE)]
 
 
 # получить обратную перестановку
-def getReversePermutation(arr):
+def get_reverse_permutation(arr):
     reverse = [0] * len(arr)
     for i in range(len(arr)):
         reverse[arr[i]] = i
@@ -71,7 +71,7 @@ def process_permutation(arr):
         # формируем заголовок
         header = ""
         # получаем обратную перестановку
-        reverse = getReversePermutation(arr)
+        reverse = get_reverse_permutation(arr)
         for i in range(SIZE):
             header += names[reverse[i]] + " "
         # выводим названия вершин

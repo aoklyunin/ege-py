@@ -4,27 +4,27 @@ import itertools
 SIZE = 7
 
 # названия вершин
-names = ['А', 'Б', 'В', 'Г', 'Д', 'Е', 'Ж']
+names = ['А', 'Б', 'В', 'Г', 'Д', 'Е', 'К']
 
 #   П1  П2  П3  П4  П5  П6  П7
 source = [
-    [0, 10, 15, 0, 0, 0, 0],  # П1
-    [10, 0, 0, 13, 17, 0, 0],  # П2
-    [15, 0, 0, 0, 19, 0, 9],  # П3
-    [0, 14, 0, 0, 10, 20, 11],  # П4
-    [0, 17, 19, 10, 0, 0, 20],  # П5
-    [0, 0, 0, 20, 0, 0, 25],  # П6
-    [0, 0, 9, 11, 20, 25, 0]  # П7
+            [0, 0, 30, 0, 25, 0, 18], # П1
+            [0, 0, 17, 12, 0, 0, 0], # П2
+            [30, 17, 0, 23,0, 34, 15], # П3
+            [0, 12, 23, 0, 0, 46, 0], # П4
+            [25, 0, 0, 0, 0, 0, 37], # П5
+            [0, 0, 34, 46, 0, 0, 18], # П6
+            [18, 0, 15, 0, 37, 18, 0]  # П7
 ]
-#    А  Б  В  Г  Д  Е  Ж
+#    А  Б  В  Г  Д  Е  К
 target = [
-    [0, 1, 1, 0, 0, 0, 0],  # A
-    [1, 0, 0, 1, 1, 0, 0],  # Б
-    [1, 0, 0, 1, 0, 1, 0],  # В
-    [0, 1, 1, 0, 1, 1, 0],  # Г
-    [0, 1, 0, 1, 0, 1, 1],  # Д
-    [0, 0, 1, 1, 1, 0, 1],  # Е
-    [0, 0, 0, 0, 1, 1, 0]  # Ж
+            [0, 1, 1, 0, 1, 0, 0], # A
+            [1, 0, 1, 0, 0, 0, 0], # Б
+            [1, 1, 0, 1, 1, 1, 0], # В
+            [0, 0, 1, 0, 0, 1, 1], # Г
+            [1, 0, 1, 0, 0, 1, 0], # Д
+            [0, 0, 1, 1, 1, 0, 1], # Е
+            [0, 0, 0, 1, 0, 1, 0]  # К
 ]
 
 # степени вершин
@@ -43,7 +43,6 @@ def get_reverse_permutation(arr):
 
 # обработка перестановки
 def process_permutation(arr):
-    print(arr)
     # проверяем, что в представлениях совпадают степени вершин
     for i in range(SIZE):
         if source_sum[arr[i]] != target_sum[i]:
@@ -63,24 +62,17 @@ def process_permutation(arr):
 
     # здесь мы уже выполняем проверку, определённую заданием
 
-    # расстояние между Г и Д
-    gd_distance = source[arr[3]][arr[4]]
-    # расстояние между Г и Е
-    ge_distance = source[arr[3]][arr[5]]
-    # расстояние между А и Б
-    ab_distance = source[arr[0]][arr[1]]
-    # если расстояние ГД меньше ГЕ, то комбинация нам подходит
-    if gd_distance < ge_distance:
-        # формируем заголовок
-        header = ""
-        # получаем обратную перестановку
-        reverse = get_reverse_permutation(arr)
-        for i in range(SIZE):
-            header += names[reverse[i]] + " "
-        # выводим названия вершин
-        print(header)
-        # выводим расстояния
-        print(ab_distance, gd_distance, ge_distance)
+    # формируем заголовок
+    header = ""
+    # получаем обратную перестановку
+    reverse = get_reverse_permutation(arr)
+    for i in range(SIZE):
+        header += names[reverse[i]] + " "
+
+    # выводим названия вершин
+    print(header)
+    adDistance = source[arr[0]][arr[4]]
+    print(adDistance)
 
 
 # главный метод программы
@@ -97,3 +89,4 @@ if __name__ == '__main__':
     permutations = list(itertools.permutations([0, 1, 2, 3, 4, 5, 6]))
     for permutation in permutations:
         process_permutation(permutation)
+
