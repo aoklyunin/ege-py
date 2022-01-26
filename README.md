@@ -23,7 +23,7 @@
 
 Ответ: 10
 
-[Исходник]()
+[Исходник](https://github.com/aoklyunin/ege-py/blob/master/problem1/example1.py)
 
 ### Пример 2
 
@@ -37,6 +37,8 @@
 ![Задание 2](problems/problem1/task2.png)
 
 Ответ: 19
+
+[Исходник](https://github.com/aoklyunin/ege-py/blob/master/problem1/example2.py)
 
 ### Пример 3
 
@@ -53,6 +55,9 @@
 
 Ответ: 9
 
+[Исходник](https://github.com/aoklyunin/ege-py/blob/master/problem1/example3.py)
+
+
 ### Пример 4
 
 На рисунке справа схема дорог Н-ского района изображена в виде графа, в таблице содержатся 
@@ -64,6 +69,9 @@
 ![Задание 4](problems/problem1/task4.png)
 
 Ответ: 20
+
+[Исходник](https://github.com/aoklyunin/ege-py/blob/master/problem1/example4.py)
+
 
 ### Пример 5
 
@@ -77,6 +85,9 @@
 
 Ответ: 46
 
+[Исходник](https://github.com/aoklyunin/ege-py/blob/master/problem1/example5.py)
+
+
 ### Пример 6
 
 Между населёнными пунктами A, B, C, D, E, F построены дороги, протяжённость которых приведена
@@ -88,6 +99,9 @@
 ![Задание 6](problems/problem1/task6.png)
 
 Ответ: 17
+
+[Исходник](https://github.com/aoklyunin/ege-py/blob/master/problem1/example6.py)
+
 
 ### Пример 7
 
@@ -104,6 +118,9 @@ B в A дороги нет.
 
 Ответ: 6
 
+[Исходник](https://github.com/aoklyunin/ege-py/blob/master/problem1/example7.py)
+
+
 ### Пример 8
 
 Р-04. Между населёнными пунктами A, B, C, D, E, F, G построены дороги, протяжённость 
@@ -117,6 +134,9 @@ B в A дороги нет.
 ![Задание 8](problems/problem1/task8.png)
 
 Ответ: 23
+
+[Исходник](https://github.com/aoklyunin/ege-py/blob/master/problem1/example8.py)
+
 
 ### Пример 9
 
@@ -132,6 +152,9 @@ B в A дороги нет.
 ![Задание 9](problems/problem1/task9.png)
 
 Ответ: 9
+
+[Исходник](https://github.com/aoklyunin/ege-py/blob/master/problem1/example9.py)
+
 
 [Задания для самостоятельного выполнения](problems/problem1/exercises.pdf)
 
