@@ -4,7 +4,8 @@
 
 Задания взяты с [сайта Константина Полякова](https://kpolyakov.spb.ru/school/ege.htm).
 
-[Java Исходники решений](https://github.com/aoklyunin/ege_java) 
+[Java Исходники решений](https://github.com/aoklyunin/ege_java)
+
 [С++ Исходники решений](https://github.com/aoklyunin/ege_cpp) 
 
 ## Задание 1
