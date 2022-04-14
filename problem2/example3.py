@@ -11,17 +11,17 @@ def impl(a, b):
 
 # логическая функция, аргументы которой мы подбираем
 def f(x, y, z, w):
-    return (x or y) and (y != z) and not w
+    return ((x and not y) or impl(w, z)) == (z == x)
 
 
 # проверка значений в линии на совпадение
 def find_line(xV, yV, zV, wV, f, combinations):
-    if xV and zV and f and combinations[0] is None:
+    if not yV and not zV and wV and f and combinations[0] is None:
         return 0
     # обязательно надо сначала проверить эту строку, потому что она
-    if not xV and yV and not wV and f and combinations[1] is None:
+    if not xV and yV and not zV and not wV and f and combinations[1] is None:
         return 1
-    if yV and zV and not wV and f and combinations[2] is None:
+    if not xV and wV and f and combinations[2] is None:
         return 2
 
     return -1
