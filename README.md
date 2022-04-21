@@ -887,3 +887,31 @@ def F( n ):
 **Ответ: 30**
 
 [Задания для самостоятельного выполнения](problems/problem1921/exercises.pdf)
+
+
+## Задание 22
+
+Получив на вход число x, этот алгоритм печатает два числа: L и M.
+
+```py
+x = int(input())
+Q = 9
+L = 0
+while x >= Q:
+    L = L + 1
+    x = x - Q
+
+M = x
+if M < L:
+    M = L
+    L = x
+
+print(L)
+print(M)
+```
+
+[Исходник](https://github.com/aoklyunin/ege-py/blob/master/problem22/example1.py)
+
+**Ответ: 30**
+
+[Задания для самостоятельного выполнения](problems/problem22/exercises.pdf)
