@@ -1228,3 +1228,5 @@ N кусков оптоволокна, из которых попросили п
 [Исходник](https://github.com/aoklyunin/ege-py/blob/master/problem26/example3.py)
 
 [Задания для самостоятельного выполнения](problems/problem26/exercises_26.pdf)
+
+[Файлы для задач](problems/problem_26/26data.zip)
