@@ -78,7 +78,7 @@ def checkPlayer2(s, step):
     return checkPlayer1(s + 1, step + 1) or checkPlayer1(s + 4, step + 1) or checkPlayer1(s * 2, step + 1)
 
 
-# перебираем кол-во камней во второй куче
+# перебираем кол-во камней в куче
 for s in range(1, 51 + 1):
     # запускаем обработку первого шага Пети, если
     # нас устраивает результат,
